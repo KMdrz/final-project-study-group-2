@@ -2,10 +2,10 @@ import pandas as pd
 import numpy as np
 
 # Load datasets
-df_a = pd.read_csv("TABLE1_BasicLiteratePopulation.csv")
-df_b = pd.read_csv("TABLE2_LiteracyLevel5Above.csv")
-df_c = pd.read_csv("TABLE3_FunctionalLiteratePopulation.csv")
-df_d = pd.read_csv("TABLE2_LiteracyLevel10Above.csv")
+df_a = pd.read_excel("TABLE1_BasicLiteratePopulation.xlsx", header=None)
+df_b = pd.read_excel("TABLE2_LiteracyLevel5Above.xlsx", header=None)
+df_c = pd.read_excel("TABLE3_FunctionalLiteratePopulation.xlsx", header=None)
+df_d = pd.read_excel("TABLE4_LiteracyLevel10Above.xlsx", header=None)
 
 # Inspect dataset A
 print("Dataset A:", df_a.shape)
@@ -28,7 +28,7 @@ print(df_c.dtypes)
 print(df_c.isnull().sum())
 print("Duplicates:", df_c.duplicated().sum())
 
-# Inspect dataset C
+# Inspect dataset D
 print("Dataset D:", df_d.shape)
 print(df_d.head())
 print(df_d.dtypes)
